@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sevillana&display=swap');
+
+@import "tailwindcss";
+
+* {
+  font-family: "Roboto", sans-serif !important;
+}
