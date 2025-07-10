@@ -35,6 +35,10 @@ app.use(express.urlencoded({ extended: true }));
 
 //! routes
 
+app.get("/", (req, res) => {
+  res.send("✅ Server is working fine!");
+});
+
 app.use("/api/user", userRouter);
 app.use("/api/appointments", appointmentRoutes);
 
