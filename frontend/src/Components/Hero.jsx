@@ -25,9 +25,10 @@ const slides = [
   },
   {
     id: 2,
-    title: "SAAS Clinic",
+    title: "SAAS Clinic", 
+     full:"Superspeciality Allergy Asthma & Sleep Clinic",
     highlight: "Specialty Care",
-    description: "Comprehensive outpatient services offering advanced diagnostics, preventive care, and specialty consultations.",
+    description: "Comprehensive outpatient services offering advanced diagnostics, preventive care, and speciality  consultations.",
     bgImage: Hospital,
     cta: "Consult Now",
     emergency: "Clinic Helpline: (555) 333-4444",
@@ -135,8 +136,12 @@ const Hero = () => {
                   {current.highlight}
                 </div>
                 
-                <h1 className="text-2xl md:text-5xl font-bold mb-4 leading-tight">
+                <h1 className="text-2xl md:text-5xl font-bold mb-2 md:mb-4 leading-tight">
                   {current.title}
+                </h1>
+                <h1 className=" text-xl md:text-3xl font-bold">
+                  {current.full}
+
                 </h1>
                 
                 <p className="text-sm md:text-xl mb-4 leading-relaxed max-w-lg">
@@ -183,7 +188,7 @@ const Hero = () => {
             <span className="text-[14px] md:text-xl  font-medium">Call for Appointment</span>
           </div>
           <a 
-            href="tel:+1234567890" 
+            href="tel:+7997732332" 
             className="bg-white text-[#00A297] px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition flex items-center"
           >
             Call Now

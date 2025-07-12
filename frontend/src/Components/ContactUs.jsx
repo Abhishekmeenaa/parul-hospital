@@ -51,29 +51,29 @@ const ContactUs = () => {
       <div className="mx-auto px-4 py-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Phone Card */}
-          <div className="bg-white border border-gray-200 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+          <a href="tel:07552556620"    className="bg-white border border-gray-200 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
             <div className="bg-[#00A297] bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
               <FaPhone className="text-white text-2xl" />
             </div>
             <h3 className="text-xl font-bold text-gray-800 mb-2">Call Us</h3>
             <p className="text-gray-600 mb-2">24/7 Emergency & Support</p>
             <a href="tel:07552556620" className="text-[#00A297] hover:text-[#007a70] font-medium text-lg">
-              0755-2556620, 2556669 <br />
+              0755-2556620, 2556669, <br />
               
             </a>
             <a href="tel:07552556620"   className="text-[#00A297]  hover:text-[#007a70] font-medium text-lg">
               7999732232<br />
               
             </a>
-          </div>
+          </a>
 
           {/* Email Card */}
           <div className="bg-white border border-gray-200 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-            <div className="bg-[#00A297] bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+            <a href="mailto:parulhospital123@gmail.com" className="bg-[#00A297] bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
               <FaEnvelope className="text-white text-2xl" />
-            </div>
+            </a>
             <h3 className="text-xl font-bold text-gray-800 mb-2">Email Us</h3>
-            <p className="text-gray-600 mb-2">For general inquiries</p>
+            <p className="text-gray-600 mb-2">For General Enquiries</p>
             <a href="mailto:parulhospital123@gmail.com" className="text-[#00A297] hover:text-[#007a70] font-medium text-lg">
               parulhospital123@gmail.com
             </a>
@@ -81,11 +81,11 @@ const ContactUs = () => {
 
           {/* Address Card */}
           <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-            <div className="bg-[#00A297] bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+            <a href='https://maps.app.goo.gl/oYqpkrzJcMqR6keP8' className="bg-[#00A297] bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
               <FaMapMarkerAlt className="text-white text-2xl" />
-            </div>
+            </a >
             <h3 className="text-xl font-bold text-gray-800 mb-2">Visit Us</h3>
-            <p className="text-gray-600 mb-2">Our hospital location</p>
+            <p className="text-gray-600 mb-2">Our Hospital Location</p>
             <address className="not-italic text-[#00A297]">
               Parul Hospital, Shivaji Nagar, Bhopal
             </address>
