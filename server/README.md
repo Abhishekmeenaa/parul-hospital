@@ -3,7 +3,7 @@ sourabhbadgaiya2: Update the existing `README.md` file to include documentation 
 ## Base URL
 
 ```
-http://<your-server-domain>/api
+https://parul-hospital.onrender.com/api
 ```
 
 ---
