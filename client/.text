@@ -1,0 +1,23 @@
+// contact us
+
+const inquiryData = {
+  name: 'Abhishek Meena',       // 👈 Replace with test name
+  phone: '9876543210',          // 👈 Replace with test phone number
+  email: 'abhishek@example.com',// 👈 Replace with test email
+  message: 'I am interested in your services.', // 👈 Sample message
+  department: 'general',        // 👈 Can be 'general', 'sales', 'support', etc.
+  requestCallback: true,        // 👈 true if user wants callback
+  callbackTime: '2025-07-14T15:30:00Z' // 👈 ISO time format for callback
+};
+
+ // select optin rahnee department
+department-:  { value: 'cardiology', label: 'Cardiology' },
+    { value: 'orthopedics', label: 'Orthopedics' },
+    { value: 'pediatrics', label: 'Pediatrics' },
+     yeah teeno ayenge
+
+
+
+// admin   
+// Patient Enquiries|
+   action select option

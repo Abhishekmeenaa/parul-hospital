@@ -7,15 +7,29 @@ const ContactUs = () => {
     name: '',
     phone: '',
     email: '',
-    message: ''
+    message: '',
+    department: 'general',
+    requestCallback: false,
+    callbackTime: ''
   });
+
+  // Department options
+  const departments = [
+    // { value: 'general', label: 'General Inquiry' },
+    { value: 'cardiology', label: 'Cardiology' },
+    // { value: 'neurology', label: 'Neurology' },
+    { value: 'orthopedics', label: 'Orthopedics' },
+    { value: 'pediatrics', label: 'Pediatrics' },
+    // { value: 'emergency', label: 'Emergency' },
+    // { value: 'appointment', label: 'Appointment' }
+  ];
 
   // Handle form input changes
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
@@ -31,18 +45,22 @@ const ContactUs = () => {
       name: '',
       phone: '',
       email: '',
-      message: ''
+      message: '',
+      department: 'general',
+      requestCallback: false,
+      callbackTime: ''
     });
   };
 
   return (
-    <div className=" min-h-screen">
+    <div className="min-h-screen">
       {/* Header Section */}
       <div className="text-center mb-2 pt-12">
         <h1 className="text-2xl font-bold text-[#161B38] sm:text-3xl">
           Contact <span className="text-[#00A297]">Parul</span> Hospital
         </h1>
-  <div className="w-20 h-1 bg-[#00A297] mx-auto mt-3 mb-4 rounded-full" />        <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-600">
+        <div className="w-20 h-1 bg-[#00A297] mx-auto mt-3 mb-4 rounded-full" />
+        <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-600">
           We're here to help you with all your healthcare needs. Reach out to us anytime
         </p>
       </div>
@@ -51,7 +69,7 @@ const ContactUs = () => {
       <div className="mx-auto px-4 py-8 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Phone Card */}
-          <a href="tel:07552556620"    className="bg-white border border-gray-200 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+          <a href="tel:07552556620" className="bg-white border border-gray-200 rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
             <div className="bg-[#00A297] bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
               <FaPhone className="text-white text-2xl" />
             </div>
@@ -59,11 +77,9 @@ const ContactUs = () => {
             <p className="text-gray-600 mb-2">24/7 Emergency & Support</p>
             <a href="tel:07552556620" className="text-[#00A297] hover:text-[#007a70] font-medium text-lg">
               0755-2556620, 2556669, <br />
-              
             </a>
-            <a href="tel:07552556620"   className="text-[#00A297]  hover:text-[#007a70] font-medium text-lg">
+            <a href="tel:07552556620" className="text-[#00A297]  hover:text-[#007a70] font-medium text-lg">
               7999732232<br />
-              
             </a>
           </a>
 
@@ -83,7 +99,7 @@ const ContactUs = () => {
           <div className="bg-white rounded-xl border border-gray-200 shadow-md p-6 text-center hover:shadow-lg transition-shadow">
             <a href='https://maps.app.goo.gl/oYqpkrzJcMqR6keP8' className="bg-[#00A297] bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
               <FaMapMarkerAlt className="text-white text-2xl" />
-            </a >
+            </a>
             <h3 className="text-xl font-bold text-gray-800 mb-2">Visit Us</h3>
             <p className="text-gray-600 mb-2">Our Hospital Location</p>
             <address className="not-italic text-[#00A297]">
@@ -139,6 +155,54 @@ const ContactUs = () => {
                 </div>
               </div>
               
+              {/* Department Selection */}
+              <div className="mb-4">
+                <label htmlFor="department" className="block text-gray-700 font-medium mb-2">Department *</label>
+                <select
+                  id="department"
+                  name="department"
+                  value={formData.department}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A297]"
+                  required
+                >
+                  {departments.map((dept) => (
+                    <option key={dept.value} value={dept.value}>{dept.label}</option>
+                  ))}
+                </select>
+              </div>
+              
+              {/* Callback Request */}
+              <div className="mb-4">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="requestCallback"
+                    name="requestCallback"
+                    checked={formData.requestCallback}
+                    onChange={handleInputChange}
+                    className="h-4 w-4 text-[#00A297] focus:ring-[#00A297] border-gray-300 rounded"
+                  />
+                  <label htmlFor="requestCallback" className="ml-2 block text-gray-700 font-medium">
+                    Request a callback
+                  </label>
+                </div>
+                
+                {formData.requestCallback && (
+                  <div className="mt-2">
+                    <label htmlFor="callbackTime" className="block text-gray-700 font-medium mb-2">Preferred Callback Time</label>
+                    <input
+                      type="time"
+                      id="callbackTime"
+                      name="callbackTime"
+                      value={formData.callbackTime}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A297]"
+                    />
+                  </div>
+                )}
+              </div>
+              
               <div className="mb-6">
                 <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message *</label>
                 <textarea 
@@ -175,9 +239,6 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-
-      {/* Emergency Banner */}
-     
     </div>
   );
 };

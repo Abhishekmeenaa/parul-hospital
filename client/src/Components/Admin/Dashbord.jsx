@@ -3,6 +3,7 @@
 import React from 'react';
 import { FaUserAlt, FaBell, FaCalendarCheck, FaHospital } from 'react-icons/fa';
 
+
 const Dashboard = () => {
   return (
     <div className="p-2 bg-gray-50 min-h-screen">
@@ -36,28 +37,28 @@ const Dashboard = () => {
       </div>
 
       {/* Status Breakdown */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
-        <div className="bg-blue-100 p-4 rounded-lg text-center">
-          <p className="text-sm">Contacted</p>
-          <p className="text-xl font-bold">10</p>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+          <div className="bg-blue-100 p-4 rounded-lg text-center">
+            {/* <p className="text-sm">Contacted</p> */}
+            {/* <p className="text-xl font-bold">10</p> */}
+          </div>
+          <div className="bg-purple-100 p-4 rounded-lg text-center">
+            {/* <p className="text-sm">Visit Scheduled</p>
+            <p className="text-xl font-bold">5</p> */}
+          </div>
+          <div className="bg-yellow-100 p-4 rounded-lg text-center">
+            {/* <p className="text-sm">Admitted</p>
+            <p className="text-xl font-bold">3</p> */}
+          </div>
+          <div className="bg-green-100 p-4 rounded-lg text-center">
+            {/* <p className="text-sm">Treatment Done</p>
+            <p className="text-xl font-bold">15</p> */}
+          </div>
+          <div className="bg-gray-100 p-4 rounded-lg text-center">
+            {/* <p className="text-sm">Discharged</p>
+            <p className="text-xl font-bold">7</p> */}
+          </div>
         </div>
-        <div className="bg-purple-100 p-4 rounded-lg text-center">
-          <p className="text-sm">Visit Scheduled</p>
-          <p className="text-xl font-bold">5</p>
-        </div>
-        <div className="bg-yellow-100 p-4 rounded-lg text-center">
-          <p className="text-sm">Admitted</p>
-          <p className="text-xl font-bold">3</p>
-        </div>
-        <div className="bg-green-100 p-4 rounded-lg text-center">
-          <p className="text-sm">Treatment Done</p>
-          <p className="text-xl font-bold">15</p>
-        </div>
-        <div className="bg-gray-100 p-4 rounded-lg text-center">
-          <p className="text-sm">Discharged</p>
-          <p className="text-xl font-bold">7</p>
-        </div>
-      </div>
 
       {/* Recent Enquiries Table */}
       <div className="bg-white p-6 rounded-lg shadow">
