@@ -12,6 +12,7 @@ const __dirname = path.dirname(__filename);
 //! Import
 import userRouter from "./routes/user.routes.js";
 import appointmentRoutes from "./routes/appointment.routes.js";
+import inquiryRoutes from "./routes/inquiry.routes.js";
 
 import ErrorHandling from "./middleware/error.middleware.js";
 
@@ -41,6 +42,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/user", userRouter);
 app.use("/api/appointments", appointmentRoutes);
+app.use("/api/inquiries", inquiryRoutes);
 
 //! error Handling
 app.use(ErrorHandling);

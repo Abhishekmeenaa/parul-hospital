@@ -323,6 +323,136 @@ https://parul-hospital.onrender.com/api
 
 ---
 
+## Inquiry Routes
+
+### 1. Create Inquiry
+
+**POST** `/api/inquiries/`
+
+- **Purpose:** Submit a new inquiry.
+- **Required Body:**
+  ```json
+  {
+    "name": "John Doe",
+    "phone": "1234567890",
+    "email": "john@example.com",
+    "message": "I have a question about cardiology.",
+    "department": "cardiology", // or "orthopedics", "pediatrics", ""
+    "requestCallback": true,
+    "callbackTime": "2025-07-14T10:00:00.000Z"
+  }
+  ```
+- **Response:**
+  - `201 Created`
+    ```json
+    {
+      "_id": "inquiryId",
+      "name": "John Doe",
+      "phone": "1234567890",
+      "email": "john@example.com",
+      "message": "I have a question about cardiology.",
+      "department": "cardiology",
+      "requestCallback": true,
+      "callbackTime": "2025-07-14T10:00:00.000Z",
+      "createdAt": "2025-07-14T09:00:00.000Z",
+      "updatedAt": "2025-07-14T09:00:00.000Z",
+      "__v": 0
+    }
+    ```
+  - `400 Bad Request`
+    ```json
+    { "message": "Validation error message" }
+    ```
+
+---
+
+### 2. Get All Inquiries
+
+**GET** `/api/inquiries/`
+
+- **Purpose:** Get a list of all inquiries.
+- **Response:**
+  - `200 OK`
+    ```json
+    [
+      {
+        "_id": "inquiryId",
+        "name": "John Doe",
+        "phone": "1234567890",
+        "email": "john@example.com",
+        "message": "I have a question about cardiology.",
+        "department": "cardiology",
+        "requestCallback": true,
+        "callbackTime": "2025-07-14T10:00:00.000Z",
+        "createdAt": "2025-07-14T09:00:00.000Z",
+        "updatedAt": "2025-07-14T09:00:00.000Z"
+      },
+      ...
+    ]
+    ```
+
+---
+
+### 3. Get Inquiry by ID
+
+**GET** `/api/inquiries/:id`
+
+- **Purpose:** Get inquiry details by ID.
+- **URL Param:** `id` (inquiry ID)
+- **Response:**
+  - `200 OK`
+    ```json
+    {
+      "_id": "inquiryId",
+      "name": "John Doe",
+      "phone": "1234567890",
+      "email": "john@example.com",
+      "message": "I have a question about cardiology.",
+      "department": "cardiology",
+      "requestCallback": true,
+      "callbackTime": "2025-07-14T10:00:00.000Z",
+      "createdAt": "2025-07-14T09:00:00.000Z",
+      "updatedAt": "2025-07-14T09:00:00.000Z"
+    }
+    ```
+  - `404 Not Found`
+    ```json
+    { "message": "Inquiry not found" }
+    ```
+
+---
+
+### 4. Update Inquiry
+
+**PUT** `/api/inquiries/:id`
+
+- **Purpose:** Update an existing inquiry by ID.
+- **URL Param:** `id` (inquiry ID)
+- **Required Body:** Fields to update (e.g., `message`, `department`, etc.)
+- **Response:**
+  - `200 OK` (updated inquiry object)
+  - `400 Bad Request` or `404 Not Found`
+
+---
+
+### 5. Delete Inquiry
+
+**DELETE** `/api/inquiries/:id`
+
+- **Purpose:** Delete an inquiry by ID.
+- **URL Param:** `id` (inquiry ID)
+- **Response:**
+  - `200 OK`
+    ```json
+    { "message": "Inquiry deleted successfully" }
+    ```
+  - `404 Not Found`
+    ```json
+    { "message": "Inquiry not found" }
+    ```
+
+---
+
 ## Authentication & Authorization
 
 - Most user routes require authentication via JWT token in cookies.
@@ -338,7 +468,3 @@ All errors return a JSON response with a `message` field and appropriate HTTP st
 
 **For more details, see the source code or contact the API maintainer.**
 
-
-
-
-ADD  
