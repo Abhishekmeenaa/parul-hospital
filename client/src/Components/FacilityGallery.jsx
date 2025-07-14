@@ -320,7 +320,7 @@ const FacilityGallery = () => {
       description: 'Providing comprehensive care for general health and heart-related conditions.',
       image: 'https://st.depositphotos.com/1000423/3080/i/450/depositphotos_30809335-stock-photo-doctor-with-tablet-pc.jpg',
       type: 'facilities',
-      features: ['Medicine OPD', 'Diabetes & Hypertension Consult', '(Cardiology)']
+      features: ['Medicine OPD', 'Diabetes & Hypertension Consult', '2D ECHO, TMT, Holter monitoring' ,'Ambulatory BP monitoring test']
     },
     {
       id: 2,

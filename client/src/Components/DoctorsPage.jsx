@@ -8,27 +8,29 @@ import pankaj from "../assets/doctors/pankaj.jpg"
 
 const DoctorsPage = () => {
   const featuredDoctors = [
-    {
-      id: 1,
-      slug: "dr-prakhar-agarwal",
-      name: "Dr. Prakhar Agarwal",
-      qualification: "DM Pulmonary, Critical Care & Sleep Medicine",
-      specialization: " Allergy Asthma Sleep & Critical Care",
-      experience: "Ex. Senior Resident – AIIMS Delhi",
-      image: drprakhar,
-      timings: [
-        { day: "Morning", time: "10:00 AM - 2:00 PM" },
-       { day: "Evening", time: "6:00 PM - 8:00 PM" }
-        // { day: "Sunday", time: "Emergency Only" }
-      ],
-      consultationFee: "₹800",
-      rating: "4.9"
-    },
+  {
+  id: 1,
+  slug: "dr-prakhar-agarwal",
+  name: "Dr. Prakhar Agarwal",
+  qualification: "DM Pulmonary Critical Care & Sleep Medicine, MD, DNB, MNAMS, DAA (CMC Vellore) – Allergy Specialist, Ex. Senior Resident – AIIMS Delhi",
+  specialization: "Allergy Asthma Sleep & Critical Care",
+  experience: "Ex. Senior Resident – AIIMS Delhi",
+  // designation: "DM Pulmonary Critical Care & Sleep Medicine, MD, DNB, MNAMS, DAA (CMC Vellore) – Allergy Specialist, Ex. Senior Resident – AIIMS Delhi",
+  image: drprakhar,
+  timings: [
+    { day: "Morning", time: "10:00 AM - 2:00 PM" },
+    { day: "Evening", time: "6:00 PM - 8:00 PM" }
+    // { day: "Sunday", time: "Emergency Only" }
+  ],
+  consultationFee: "₹800",
+  rating: "4.9"
+},
+
     {
       id: 2,
       slug: "dr-kirti-kadian",
       name: "Dr. Kirti Kadian",
-      qualification: "Pulmonary Rehabilitation, Interstitial Lung Disease, Sleep & Critical Care",
+      qualification:  "MD, DM Pulmonary Critical Care & Sleep Medicine, Ex. Senior Resident PGIMER Rohtak, Pulmonary Rehabilitation Expert" ,
       specialization: "Pulmonary Rehabilitation, Sleep Medicine",
       experience: "Ex.Senior Resident-PGIMER Rohtak",
       image: kirti,
@@ -108,7 +110,7 @@ const DoctorsPage = () => {
               <div key={doctor.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100">
                 <div className="flex flex-col md:flex-row h-full">
                   {/* Doctor Image with Overlay */}
-                  <div className="md:w-2/4 h-64 md:h-auto relative group overflow-hidden">
+                  <div className="md:w-2/4 h-auto md:h-auto relative group overflow-hidden">
                     <img
                       src={doctor.image}
                       alt={doctor.name}
@@ -128,15 +130,15 @@ const DoctorsPage = () => {
                   {/* Doctor Details */}
                   <div className="md:w-3/4 p-6 flex flex-col">
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-bold text-gray-800 mb-1">{doctor.name}</h3>
-                      <p className="text-[#00A297] font-medium mb-3">{doctor.qualification}</p>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2">{doctor.name}</h3>
                       
-                      <div className="mb-4">
-                        <h4 className="text-sm font-semibold text-gray-500 mb-1">Specialization</h4>
-                        <p className="text-gray-700">{doctor.specialization}</p>
+                      <div className="mb-">
+                        <h4 className="text-sm font-semibold text-gray-500 ">Designation</h4>
+                      <p className="text-[#00A297] font-medium mb-3">{doctor.qualification}</p>
+                        {/* <p className="text-gray-700">{doctor.specialization}</p> */}
                       </div>
                       
-                      <div className="grid grid-cols-1 gap-4 mb-4">
+                      <div className="grid grid-cols-1 gap-4 mb-4"> 
                         <div>
                           <h4 className="text-sm font-semibold text-gray-500 mb-1">Experience</h4>
                           <p className="text-gray-700">{doctor.experience}</p>
@@ -282,27 +284,28 @@ const DoctorsPage = () => {
               </div>
             </div>
             <div className="md:w-1/2 bg-white p-8 md:p-12">
+            
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Clinic Hours</h3>
-              <ul className="space-y-4 mb-6">
-                <li className="flex justify-between border-b border-gray-100 pb-2">
-                  <span className="font-medium text-gray-700">Monday - Friday</span>
-                  <span className="text-gray-600">9:00 AM - 7:00 PM</span>
+              <ul className="space-y-4 mb-8">
+                 <li className="flex   border-b text-sm border-gray-100 pb-4">
+                  <span className="font-medium text-gray-700">Hospital Open -</span>
+                  <span className="text-gray-600 relative left-2 ">24X7</span>
                 </li>
-                <li className="flex justify-between border-b border-gray-100 pb-2">
-                  <span className="font-medium text-gray-700">Saturday</span>
-                  <span className="text-gray-600">9:00 AM - 3:00 PM</span>
+                <li className="flex justify-between border-b flex-col border-gray-100 pb-2">
+                  <span className="font-medium whitespace-nowrap mb-2 text-gray-700">Monday - Saturday</span>
+                  <span className="text-gray-600  whitespace-nowrap  ">Morning 10:00 AM - 2:00 PM  </span>
+                   <span className="text-gray-600  whitespace-nowrap  "> Evening 6:00 PM to 8:00 PM  </span>
+
                 </li>
-                <li className="flex justify-between border-b border-gray-100 pb-2">
-                  <span className="font-medium text-gray-700">Sunday</span>
-                  <span className="text-gray-600">Emergency Only</span>
-                </li>
+                
+               
               </ul>
-              <Link 
-                to="/contact" 
+              <a href="https://maps.app.goo.gl/qERf9szeBaGj3B398" 
+              
                 className="inline-flex items-center justify-center bg-[#00A297] hover:bg-[#008B8B] text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg hover:shadow-xl w-full text-center"
               >
                 Get Directions to Clinic
-              </Link>
+              </a >
             </div>
           </div>
         </div>

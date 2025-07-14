@@ -55,7 +55,7 @@ const LegalPage = () => {
           </p>
           <h3 className="text-xl font-semibold mt-4 mb-2">5. Contact Information</h3>
           <p className="mb-4">
-            For questions, email us at: <strong>privacy@parulhospital.in</strong> or call <strong>+91-9876543210</strong>
+            For questions, email us at: <strong>privacy@parulhospital.in</strong> or call <strong>7997732332</strong>
           </p>
           <p className="text-sm text-gray-500">Last updated: June 19, 2025</p>
         </section>

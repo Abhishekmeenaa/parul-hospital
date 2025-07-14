@@ -36,11 +36,11 @@ const Header = () => {
     <div className="font-sans">
       {/* Main Header */}
       <header  className="bg-[#ffffff18]  shadow-sm py-3 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-2 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <div className="flex flex-col">
-              <img className='md:w-60 w-30' src={logo} alt="logo" />
+              <img className='md:w-60 w-48' src={logo} alt="logo" />
             </div>
           </Link>
 
@@ -90,7 +90,10 @@ const Header = () => {
                   <div className="absolute  right-0 mt-2 w-56 bg-white border border-gray-200 rounded shadow-lg z-10">
                     <div className="p-3">
                       <p className="text-gray-800 font-medium">📞 Emergency Helpline</p>
-                      <p className="text-gray-700 mt-1">+91-9876543210</p>
+                      <p className="text-gray-700 px-2 mt-1">0755-2556620,2556669, </p>
+                     <p className="text-gray-700 px-2 mt-1">+91 7997732332</p>
+
+
                       <a
                         href="tel:+919876543210"
                         className="block mt-2 bg-red-500 text-white text-center px-3 py-1 rounded hover:bg-red-600 text-sm"
@@ -128,7 +131,7 @@ const Header = () => {
               <div className="flex p-2 flex-col justify-between items-center">
                 <div>
                   <p className="text-red-800 mb-2 flex-nowrap font-medium">Emergency Helpline</p>
-                  <p className="text-gray-700 mb-2">+91-9876543210</p>
+                  <p className="text-gray-700 mb-2">7997732332</p>
                 </div>
                 <a
                   href="tel:+919876543210"

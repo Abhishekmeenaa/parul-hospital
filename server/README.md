@@ -3,7 +3,7 @@ sourabhbadgaiya2: Update the existing `README.md` file to include documentation 
 ## Base URL
 
 ```
-http://<your-server-domain>/api
+https://parul-hospital.onrender.com/api
 ```
 
 ---
@@ -337,3 +337,8 @@ All errors return a JSON response with a `message` field and appropriate HTTP st
 ---
 
 **For more details, see the source code or contact the API maintainer.**
+
+
+
+
+ADD  
